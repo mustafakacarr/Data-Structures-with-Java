@@ -1,6 +1,9 @@
 package WithArray;
 
+import java.util.ArrayList;
+
 public class Stack {
+
     final int CAPACITY = 100; //(MAX NUMBER OF ITEM)
     public int[] stack;
     public int size;
@@ -15,6 +18,7 @@ public class Stack {
             return -1;
         }
         stack[size] = newData;
+
         size++;
         return 0;
     }
@@ -23,6 +27,7 @@ public class Stack {
         if (isEmpty()) {
             throw new Exception("WithArray.Stack underflow");
         }
+
         int top = stack[size - 1];
         size--;
         return top;
@@ -32,6 +37,7 @@ public class Stack {
         if (isEmpty()) {
             throw new Exception("WithArray.Stack underflow");
         }
+
         return stack[size - 1];
     }
 
